@@ -4,10 +4,16 @@
   "description": "Assignment 4",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "compile": " node dist/index.js",
-    "compile:start": "npm run compile && npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " node dist/index.js",
+    "prestart:dev": "npm run build",
+    "start:dev": " npm run start",
+    "build": " npm run build:lint && npm run build:compile",
+    "build:lint": "eslint ./src/**/*.ts --ext .ts",
+    "prestart:dev:fix": "npm run build",
+    "start:dev:fix": " npm run start",
+    "build:fix": " npm run build:lint:fix && npm run build:compile",
+    "build:lint:fix": "eslint ./src/**/*.ts --ext .ts --fix",
+    "build:compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/anghamalshahoud/developing-software-intro-assignment-4/issues"
   },
-  "homepage": "https://github.com/anghamalshahoud/developing-software-intro-assignment-4#readme"
+  "homepage": "https://github.com/anghamalshahoud/developing-software-intro-assignment-4#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.10.0",
+    "typescript": "^4.0.3"
+  }
 }
