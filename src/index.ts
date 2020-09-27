@@ -1,2 +1,2 @@
-const test = "goodby World!"
-console.log(test);
+
+console.log('test');

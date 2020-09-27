@@ -1,3 +1,2 @@
-var test = "goodby World!";
-console.log(test);
+console.log('test');
 //# sourceMappingURL=index.js.map
