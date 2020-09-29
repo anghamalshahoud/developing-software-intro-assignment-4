@@ -1,8 +1,9 @@
 import { string } from 'yargs';
 import yargs = require('yargs');
-import {say_hello_to} from './say-hello';
+import {Hello} from './function';
 
- yargs.command(
+
+export default yargs.command(
 
      "hello",
 
@@ -26,8 +27,10 @@ import {say_hello_to} from './say-hello';
     function(args){
 
         
- 
-        console.log('Hello'+ ' ' + args.name);
+     const greet = Hello( args.name);
+
+     console.log(greet);
+       
 
 
     }

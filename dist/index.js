@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const yargs = require("yargs");
-yargs.command("hello", "to choose who will say hello!", function (yargs) {
+const function_1 = require("./function");
+exports.default = yargs.command("hello", "to choose who will say hello!", function (yargs) {
     return yargs.options({
         name: {
             type: 'string',
@@ -10,7 +11,8 @@ yargs.command("hello", "to choose who will say hello!", function (yargs) {
         }
     });
 }, function (args) {
-    console.log('Hello' + ' ' + args.name);
+    const greet = function_1.Hello(args.name);
+    console.log(greet);
 });
 yargs.help().parse();
 //# sourceMappingURL=index.js.map
