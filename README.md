@@ -59,8 +59,28 @@ I added Mocha & Chai to my project I also modify my NPM script so I can now in o
 - compile & run
 - lint, format, test, compile & run
 
-to run this Use the following command:
+to run (lint, format, test, compile & run) Use the following command:
 ```
 npm run start:dev
+```
+
+## task 6
+I adde nyc istanbul to my project so I can run my test with coverage, now I have the following in  my npm script:
+
+- compile
+- start
+- lint
+- format
+- test
+- compile & run
+- lint, format, test, compile & run
+
+And you can run the test with coverage by using the following command:
+```
+npm run coverage
+```
+or if you want to run everything without the coverage use the following command:
+```
+ npm run start:dev
 ```
 
