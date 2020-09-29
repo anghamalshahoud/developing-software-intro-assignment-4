@@ -84,3 +84,25 @@ or if you want to run everything without the coverage use the following command:
  npm run start:dev
 ```
 
+## task 7
+
+I added yargs to my project and I setup yargs to accept a single parameter, and have my program console.log "Hello" and the value of the parameter 
+and I set the parameter to be a name of a person.
+
+to run this parameter use the following cli command:
+```
+npm start -- hello -n (any name)
+```
+
+## task 8
+I created a module with a single function that will console.log "Hello" any name that being assigned to the parameter.
+and then I wrote a test to validate that my function works as intended. 
+
+to run the test coverage please run the following command:
+```
+ npm run coverage
+```
+
+
+Sincerely,
+Angham Alshahoud
