@@ -32,3 +32,35 @@ I add eslint package to the application and I set it's files and I modefied the 
   ```
   npm run start:dev:fix
   ```
+
+## task 4
+
+I add Prettier to my project and modify my NPM script so I can now in one cli command run each:
+- compile
+- start
+- lint
+- format
+- compile & run
+- lint, format, compile & run
+
+to run this Use the following command:
+```
+npm run start:dev
+```
+
+## task 5
+
+I added Mocha & Chai to my project I also modify my NPM script so I can now in one cli command run each:
+- compile
+- start
+- lint
+- format
+- test
+- compile & run
+- lint, format, test, compile & run
+
+to run this Use the following command:
+```
+npm run start:dev
+```
+
