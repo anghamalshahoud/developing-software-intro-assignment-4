@@ -1,18 +1,20 @@
 {
   "name": "acsd-assignment-4-angham",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Assignment 4",
   "main": "index.js",
   "scripts": {
     "start": " node dist/index.js",
     "prestart:dev": "npm run build",
     "start:dev": " npm run start",
-    "build": " npm run build:lint && npm run build:compile",
+    "build": " npm run build:lint && npm run bulid:prettier && npm run build:compile",
     "build:lint": "eslint ./src/**/*.ts --ext .ts",
+    "bulid:prettier": "prettier --write src/**/*.ts",
     "prestart:dev:fix": "npm run build",
     "start:dev:fix": " npm run start",
-    "build:fix": " npm run build:lint:fix && npm run build:compile",
+    "build:fix": " npm run build:lint:fix && npm run build:prettier:fix && npm run build:compile",
     "build:lint:fix": "eslint ./src/**/*.ts --ext .ts --fix",
+    "build:prettier:fix": "prettier --write src/**/*.ts --fix",
     "build:compile": "tsc"
   },
   "repository": {
@@ -30,6 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.10.0",
+    "prettier": "2.1.2",
     "typescript": "^4.0.3"
   }
 }
